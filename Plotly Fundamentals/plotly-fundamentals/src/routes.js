@@ -11,6 +11,7 @@ import EditableMode from "./pages/ConfigurationOptions/EditableMode";
 import MakingStaticChart from "./pages/ConfigurationOptions/MakingStaticChart";
 import CustomizeDownloadPlotOptions from "./pages/ConfigurationOptions/CustomizeDownloadPlotOptions";
 import ForceTheModebarAlwaysBeVisible from "./pages/ConfigurationOptions/ForceTheModebarAlwaysBeVisible";
+import NeverDisplayTheModebar from "./pages/ConfigurationOptions/NeverDisplayTheModebar";
 
 export default function Routes() {
     return (
@@ -24,6 +25,7 @@ export default function Routes() {
             <Route path="/config-options/making-static-chart" exact component={MakingStaticChart} />
             <Route path="/config-options/customize-download-plot-options" exact component={CustomizeDownloadPlotOptions} />
             <Route path="/config-options/force-the-modebar-always-be-visible" exact component={ForceTheModebarAlwaysBeVisible} />
+            <Route path="/config-options/never-display-the-modebar" exact component={NeverDisplayTheModebar} />
         </BrowserRouter>
     );
 }

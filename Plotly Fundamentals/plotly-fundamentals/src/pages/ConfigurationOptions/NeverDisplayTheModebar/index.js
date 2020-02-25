@@ -5,23 +5,30 @@ import Plotly from "plotly.js";
 import createPlotlyComponent from "react-plotly.js/factory";
 const Plot = createPlotlyComponent(Plotly);
 
-export default function ForceTheModebarAlwaysBeVisible() {
+export default function NeverDisplayTheModebar() {
     const [state, setState] = useState({});
     const [config, setConfig] = useState(undefined);
 
     useEffect(() => {
         let trace1 = {
-            y: ['Marc', 'Henrietta', 'Jean', 'Claude', 'Jeffrey', 'Jonathan', 'Jennifer', 'Zacharias'],
-            x: [90, 40, 60, 80, 75, 92, 87, 73],
+            x: ['Zebras', 'Lions', 'Pelicans'],
+            y: [90, 40, 60],
             type: 'bar',
-            orientation: 'h'
+            name: 'New York Zoo'
         };
 
-        let data = [trace1,];
+        let trace2 = {
+            x: ['Zebras', 'Lions', 'Pelicans'],
+            y: [10, 80, 45],
+            type: 'bar',
+            name: 'San Francisco Zoo'
+        };
+
+        let data = [trace1, trace2,];
 
         let layout = {
-            title: 'Always Display the Modebar',
-            showlegend: false
+            title: 'Hide the Modebar',
+            showlegend: true
         };
 
         setState({
@@ -30,7 +37,7 @@ export default function ForceTheModebarAlwaysBeVisible() {
             frames: undefined
         });
 
-        let aux_config = {displayModeBar: true};
+        let aux_config = { displayModeBar: false };
         setConfig(aux_config);
 
         return;

@@ -34,6 +34,12 @@ export default function ConfigurationOptions() {
                     Go to Force The Modebar to Always Be Visible
                 </Link >
             </div>
+            <div>
+                <Link to="/config-options/never-display-the-modebar" >
+                    Go to Never Display The Modebar
+                </Link >
+            </div>
+            
             
         </>
     );
